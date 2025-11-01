@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        // Convert to char array
+        char[] ch = s.toCharArray();
+
+        // Capitalize first letter
+        ch[0] = Character.toUpperCase(ch[0]);
+
+        // Capitalize last letter
+        ch[ch.length - 1] = Character.toUpperCase(ch[ch.length - 1]);
+
+        // Print the result
+        System.out.print("Output String: ");
+        for (char c : ch)
+            System.out.print(c);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String s = sc.nextLine();
+
+        String[] words = s.split(" ");
+        String result = "";
+
+        for (String word : words) {
+            if (word.length() == 1) {
+                // If word has only one letter
+                result += word.toUpperCase() + " ";
+            } else {
+                // Capitalize first and last letter
+                char[] ch = word.toCharArray();
+                ch[0] = Character.toUpperCase(ch[0]);
+                ch[ch.length - 1] = Character.toUpperCase(ch[ch.length - 1]);
+                result += new String(ch) + " ";
+            }
+        }
+
+        System.out.println("Output String: " + result.trim());
+    }
+}
