@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        // Converting the string to character array
+        char[] charArray = str.toCharArray();
+
+        // Counting length manually
+        int count = 0;
+        for (char c : charArray) {
+            count++;
+        }
+
+        // Displaying the result
+        System.out.println("Length of the string is: " + count);
+
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        // Using length() method to find the length
+        int length = str.length();
+
+        // Displaying the result
+        System.out.println("Length of the string is: " + length);
+
+        sc.close();
+    }
+}
+
