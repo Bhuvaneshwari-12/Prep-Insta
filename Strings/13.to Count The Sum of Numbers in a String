@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        int sum = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            // Check if character is between '0' and '9'
+            if (ch >= '0' && ch <= '9') {
+                sum += ch - '0';  // Convert character digit to number
+            }
+        }
+
+        System.out.println("Sum of digits in the string: " + sum);
+    }
+}
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        int sum = 0;
+
+        // Loop through each character of the string
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            // Check if character is a digit
+            if (Character.isDigit(ch)) {
+                sum += Character.getNumericValue(ch);
+            }
+        }
+
+        System.out.println("Sum of digits in the string: " + sum);
+    }
+}
