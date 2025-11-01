@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        String s1 = "";
+
+        // Loop to toggle the case of each character
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isUpperCase(s.charAt(i))) {
+                s1 = s1 + Character.toLowerCase(s.charAt(i));
+            } else {
+                s1 = s1 + Character.toUpperCase(s.charAt(i));
+            }
+        }
+
+        System.out.println("Toggle String is : " + s1);
+
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String str1 = sc.nextLine();
+
+        // Convert string to character array
+        char str[] = str1.toCharArray();
+
+        // Toggle each character manually using ASCII values
+        for (int i = 0; i < str.length; i++) {
+            if (str[i] >= 'A' && str[i] <= 'Z') {
+                str[i] = (char) (str[i] + 'a' - 'A'); // Uppercase to lowercase
+            } else if (str[i] >= 'a' && str[i] <= 'z') {
+                str[i] = (char) (str[i] + 'A' - 'a'); // Lowercase to uppercase
+            }
+        }
+
+        // Display the toggled string
+        System.out.print("Toggled string: ");
+        for (int i = 0; i < str.length; i++) {
+            System.out.print(str[i]);
+        }
+
+        sc.close();
+    }
+}
