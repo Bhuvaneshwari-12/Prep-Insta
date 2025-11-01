@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class Main{						
+    public static void main(String[] args){										
+       Scanner sc = new Scanner(System.in);
+
+       char ch = sc.next().charAt(0); 
+
+       if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+	       System.out.println(ch + " is an Alphabet");
+	     else
+	      System.out.println(ch + " is not an Alphabet");                              
+	
+    } 
+    
+}
+
+import java.util.Scanner;
+
+public class Main {						
+    public static void main(String[] args) {										
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");  
+        char ch = sc.next().charAt(0);  // Take first character input
+
+        
+        if ((ch >= 97 && ch <= 122) || (ch >= 65 && ch <= 90)) {
+            System.out.println(ch + " is an Alphabet");
+        } else {
+            System.out.println(ch + " is not an Alphabet");
+        }
+
+        sc.close();
+    } 
+}
+
+
+import java.util.Scanner;
+
+public class Main {						
+    public static void main(String[] args) {										
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");  
+        char ch = sc.next().charAt(0);  
+
+        
+        if (isAlphabet(ch)) {
+            System.out.println(ch + " is an Alphabet");
+        } else {
+            System.out.println(ch + " is not an Alphabet");
+        }
+
+        sc.close();
+    } 
+
+
+    static boolean isAlphabet(char c) {
+        return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
+    }
+}
