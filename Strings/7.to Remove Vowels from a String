@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        // Convert string to lowercase for easy checking
+        String result = "";
+
+        // Loop through each character
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            // Check if character is NOT a vowel
+            if (!(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+                  ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')) {
+                result = result + ch; // Append only non-vowel characters
+            }
+        }
+
+        // Display the string without vowels
+        System.out.println("String after removing vowels: " + result);
+
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        // Using regex to remove both uppercase and lowercase vowels
+        String result = s.replaceAll("[AEIOUaeiou]", "");
+
+        // Display the result
+        System.out.println("String after removing vowels: " + result);
+
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    // Method to remove vowels
+    static String removeVowels(String s) {
+        // Using regex to remove vowels (both uppercase and lowercase)
+        return s.replaceAll("[AEIOUaeiou]", "");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking input from user
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        // Calling method and storing result
+        String result = removeVowels(s);
+
+        // Displaying the result
+        System.out.println("String after removing vowels: " + result);
+
+        sc.close();
+    }
+}
