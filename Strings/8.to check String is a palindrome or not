@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class StringIsAPalindromeOrNot {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Taking input from user
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        String rev = "";
+
+        // Reversing the string manually
+        for (int i = s.length() - 1; i >= 0; i--) {
+            rev = rev + s.charAt(i);
+        }
+
+        // Comparing original and reversed string
+        if (s.equalsIgnoreCase(rev))  // equalsIgnoreCase to handle case-insensitivity
+            System.out.println("String is palindrome");
+        else
+            System.out.println("String is not palindrome");
+
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking string input from user
+        System.out.print("Enter a string: ");
+        String original = sc.nextLine();
+
+        String reverse = "";  // To store reversed string
+
+        int length = original.length();
+
+        // Reversing the string
+        for (int i = length - 1; i >= 0; i--) {
+            reverse = reverse + original.charAt(i);
+        }
+
+        // Checking if the original and reversed strings are same
+        if (original.equalsIgnoreCase(reverse))
+            System.out.println("Entered string is a palindrome.");
+        else
+            System.out.println("Entered string isn't a palindrome.");
+
+        sc.close();
+    }
+}
