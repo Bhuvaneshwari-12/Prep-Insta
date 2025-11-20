@@ -14,3 +14,41 @@ public class Main{
         }
     } 
 }
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num>=0){
+            if(num==0){
+                System.out.print("Zero");
+            }
+            else{
+                System.out.print("Positive");
+            }
+        }
+        else{
+            System.out.print("Negative");
+        }
+    }
+}
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num ==0){
+            System.out.print("Zero");
+        }
+        else{
+        String res = num > 0 ? "positive" : "negative" ;
+        System.out.print(res);
+        }
+        
+    }
+}
