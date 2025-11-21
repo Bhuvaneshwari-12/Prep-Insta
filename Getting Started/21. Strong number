@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int ori = num;
+		int sum=0;
+		while(num!=0){
+		    int rem = num%10;//145% 10 =5
+		    int fact =1;
+		    for(int i= 1; i<=rem ; i++){ // i=1,2,3,4,145
+		        fact = fact *i;
+		    }
+		     sum =sum+ fact;
+		     num= num/10;
+		     
+		}
+		if(sum == ori)
+		System.out.print("Strong");
+		else
+		System.out.print("Not");
+		
+		
+	}
+}
