@@ -35,3 +35,37 @@ public class Main
             System.out.println("Not");
     }
 }
+
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        int low = 1, high = num;
+        boolean flag = false;
+
+        while(low <= high){
+            int mid = (low + high) / 2;
+
+            if(mid * mid == num){
+                flag = true;
+                break;
+            }
+            else if(mid * mid < num){
+                low = mid + 1;
+            }
+            else{
+                high = mid - 1;
+            }
+        }
+
+        if(flag)
+            System.out.println("Perfect square");
+        else
+            System.out.println("Not");
+    }
+}
+
