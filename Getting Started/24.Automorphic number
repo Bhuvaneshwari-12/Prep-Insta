@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+	    int sqrt= num*num;
+	    int len = String.valueOf(num).length();
+	    int last= sqrt%(int)Math.pow(10, len);
+	    if(last == num){
+	        System.out.print("Automorphic");
+	    }
+	    else{
+	        System.out.print("Not");
+	    }
+	}
+}
