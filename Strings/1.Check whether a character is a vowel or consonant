@@ -19,6 +19,22 @@ public class Main{
 }
 
 
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        char letter = sc.next().charAt(0);
+        char ch = Character.toLowerCase(letter);
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            System.out.print("Vowel");
+        }
+        else{
+            System.out.print("Consonant");
+        }
+    }
+}
+
+
 
 import java.util.Scanner;
 
