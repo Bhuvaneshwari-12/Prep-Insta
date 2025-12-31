@@ -1,3 +1,25 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        System.out.println(s);
+        char c;
+        for(int i = 0; i< s.length(); i++){
+         if(Character.isUpperCase(s.charAt(i))) {
+              c = Character.toLowerCase(s.charAt(i));
+         } 
+         else{
+             c = Character.toUpperCase(s.charAt(i));
+         }
+        
+        System.out.print(c);
+        }
+        
+        
+    }
+}
+
 import java.util.Scanner;
 
 public class Main {
