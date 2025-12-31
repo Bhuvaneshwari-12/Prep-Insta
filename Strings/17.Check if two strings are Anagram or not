@@ -49,3 +49,35 @@ public class Main {
             System.out.println("Not Anagram");
     }
 }
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s1 = sc.nextLine().toLowerCase();
+        String s2 = sc.nextLine().toLowerCase();
+
+        if (s1.length() != s2.length()) {
+            System.out.println("Not Anagram");
+            return;
+        }
+
+        for (int i = 0; i < s1.length(); i++) {
+            char ch = s1.charAt(i);
+
+            int index = s2.indexOf(ch);
+
+            if (index == -1) {
+                System.out.println("Not Anagram");
+                return;
+            }
+
+            // remove matched character from s2
+            s2 = s2.substring(0, index) + s2.substring(index + 1);
+        }
+
+        System.out.println("Anagram");
+    }
+}
